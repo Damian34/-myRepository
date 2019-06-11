@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Last Calculator Results</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <div ion-item *ngFor="let lastResult of lastResults">
+            <div item-right>
+                {{lastResult.result}}
+            </div>
+        </div>
+    </ion-list>
+</ion-content>

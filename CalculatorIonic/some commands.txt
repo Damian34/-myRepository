@@ -1,0 +1,38 @@
+https://ionicframework.com/docs/v1/guide/installation.html
+https://ionicframework.com/docs/intro/tutorial/
+
+//how to install
+npm install -g cordova@7.1.0
+npm install -g ionic@4.0.1
+
+///
+in the project i modify only folder folder src
+main/first page is in pages\home\home.html
+
+if I want to add a menu, I have to do it in the folder src/app
+///
+
+
+//create ionic project with name todo2
+ionic start todo2 blank --type ionic1    
+
+//or this way
+ionic start HelloWorld blank --v2
+ionic start HelloWorld tutorial --v4
+
+
+//run app in browser
+ionic serve
+
+
+//sharing android platform to project
+ionic cordova platform add android
+ionic cordova build android
+ionic cordova run android
+
+ionic cordova platform
+cordova platform remove android
+cordova platform add android@4.1.1
+
+
+
