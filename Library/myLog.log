@@ -1,0 +1,229 @@
+2018-03-26 17:53:54 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-26 17:53:54 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-26 17:54:01 INFO - user added - library.operation.UserOperation - addUser 
+2018-03-26 17:54:09 INFO - user added - library.operation.UserOperation - addUser 
+2018-03-26 17:54:25 INFO - book added - library.operation.BookOperation - addBook 
+2018-03-26 17:54:45 ERROR - the book could't be added - library.operation.BookOperation - addBook 
+2018-03-26 17:55:02 INFO - book added - library.operation.BookOperation - addBook 
+2018-03-26 17:55:07 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-26 17:55:07 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-26 17:56:03 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-26 17:56:03 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-26 17:56:07 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-26 17:56:07 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-26 18:04:26 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-26 18:04:27 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-26 18:04:31 INFO - books were display - library.operation.BookOperation - showBooksAndStatusOfBorrow 
+2018-03-26 18:04:34 INFO - users were display - library.operation.UserOperation - showUserWithBooksBorrowed 
+2018-03-26 18:04:36 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-26 18:04:42 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-26 18:04:45 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-26 18:04:47 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-26 18:04:50 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-26 18:04:50 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-26 21:49:43 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-26 21:49:43 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-26 21:49:49 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-26 21:49:53 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-26 21:49:54 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-03-26 21:50:03 INFO - users were display - library.operation.UserOperation - showUserWithBooksBorrowed 
+2018-03-26 21:50:05 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-26 21:50:05 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-26 21:50:30 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-26 21:50:30 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-26 21:50:30 ERROR - com.thoughtworks.xstream.io.StreamException:  - library.operation.Storage - read 
+2018-03-26 21:50:35 ERROR - lack of books - library.operation.BookOperation - showBooksAndStatusOfBorrow 
+2018-03-26 21:51:25 INFO - book added - library.operation.BookOperation - addBook 
+2018-03-26 21:55:03 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-26 21:55:04 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-26 21:55:04 ERROR - com.thoughtworks.xstream.io.StreamException:  - library.operation.Storage - read 
+2018-03-26 21:55:11 ERROR - lack of books - library.operation.BookOperation - showBooksAndStatusOfBorrow 
+2018-03-26 21:55:47 INFO - book added - library.operation.BookOperation - addBook 
+2018-03-26 22:00:10 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-26 22:00:10 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-26 22:00:10 ERROR - com.thoughtworks.xstream.io.StreamException:  - library.operation.Storage - read 
+2018-03-26 22:00:39 INFO - book added - library.operation.BookOperation - addBook 
+2018-03-26 22:00:42 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-26 22:00:42 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-26 22:00:48 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-26 22:00:48 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-26 22:00:51 INFO - books were display - library.operation.BookOperation - showBooksAndStatusOfBorrow 
+2018-03-26 22:01:31 INFO - book added - library.operation.BookOperation - addBook 
+2018-03-26 22:01:35 INFO - books were display - library.operation.BookOperation - showBooksAndStatusOfBorrow 
+2018-03-26 22:02:14 INFO - book added - library.operation.BookOperation - addBook 
+2018-03-26 22:02:18 INFO - books were display - library.operation.BookOperation - showBooksAndStatusOfBorrow 
+2018-03-26 22:02:35 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-26 22:02:35 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-26 22:02:42 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-26 22:02:42 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-26 22:02:45 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-26 22:02:51 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-26 22:02:59 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-26 22:02:59 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-26 22:03:20 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-26 22:03:20 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-26 22:03:24 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-26 22:03:28 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-26 22:03:29 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-26 22:03:35 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-26 22:03:43 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-26 22:03:47 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-26 22:03:52 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-26 22:03:54 INFO - books were shown for user with id 2 - library.operation.BookOperation - showBooksByUser 
+2018-03-26 22:04:01 INFO - users were display - library.operation.UserOperation - showUserWithBooksBorrowed 
+2018-03-26 22:04:06 INFO - books were display - library.operation.BookOperation - showBooksAndStatusOfBorrow 
+2018-03-26 22:04:11 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-26 22:04:11 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-27 13:17:23 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-27 13:17:23 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-27 13:17:29 INFO - users were display - library.operation.UserOperation - showUserWithBooksBorrowed 
+2018-03-27 13:17:32 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-27 13:17:32 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-27 13:37:17 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-27 13:37:17 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 10:56:56 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 10:56:56 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 10:57:02 INFO - books were display - library.operation.BookOperation - showBooksAndStatusOfBorrow 
+2018-03-29 10:57:05 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-29 10:57:05 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-29 11:10:45 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:10:45 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:10:48 INFO - books were display - library.operation.BookOperation - showBooksAndStatusOfBorrow 
+2018-03-29 11:13:33 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:13:33 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:13:43 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:13:43 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:13:48 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-29 11:13:52 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:15:09 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:15:09 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:15:30 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-29 11:15:33 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-29 11:24:34 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:24:34 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:24:37 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-29 11:24:41 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:24:49 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-29 11:24:52 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:24:56 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:24:57 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-03-29 11:24:59 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-29 11:25:00 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-29 11:25:03 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:25:07 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:25:08 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-03-29 11:25:13 ERROR - user by 1 does't have borrowed books - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:25:15 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-29 11:25:20 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-29 11:25:22 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:25:25 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-03-29 11:25:26 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-29 11:25:27 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-29 11:25:29 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:25:32 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-29 11:25:32 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-29 11:26:35 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:26:35 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:26:37 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-29 11:26:40 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:26:43 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:26:44 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-03-29 11:26:45 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-29 11:26:47 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-29 11:26:50 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-29 11:26:50 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-29 11:37:47 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:37:47 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:37:56 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-29 11:37:59 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:38:00 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-03-29 11:38:06 ERROR - user by 1 does't have borrowed books - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:38:44 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:38:44 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:38:47 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-29 11:38:52 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:38:58 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:39:22 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:39:22 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:39:27 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-29 11:39:33 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:39:37 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:39:38 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-03-29 11:39:46 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-29 11:39:50 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-29 11:39:52 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:39:56 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:39:57 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-03-29 11:39:59 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-29 11:40:02 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-29 11:40:04 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-29 11:40:05 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-29 11:40:06 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:40:08 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-03-29 11:40:10 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:40:14 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:40:15 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-03-29 11:40:16 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-29 11:40:19 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-29 11:40:21 INFO - books were display - library.operation.BookOperation - showAvailableBooks 
+2018-03-29 11:40:22 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-03-29 11:40:24 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:40:25 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-03-29 11:40:27 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:40:30 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-29 11:40:30 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-29 11:45:43 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:45:43 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:46:18 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-29 11:47:42 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:47:42 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:47:49 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-29 11:47:52 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-29 11:47:55 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-29 11:47:55 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-29 11:50:47 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-29 11:50:47 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-29 11:50:49 INFO - users were display - library.operation.UserOperation - showUserWithBooksBorrowed 
+2018-03-29 11:50:52 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-29 11:50:52 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-31 20:44:52 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-31 20:44:53 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-31 20:44:56 INFO - books were display - library.operation.BookOperation - showBooksAndStatusOfBorrow 
+2018-03-31 20:45:00 INFO - books were display - library.operation.BookOperation - showBooksAndStatusOfBorrow 
+2018-03-31 20:45:03 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-31 20:45:09 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-31 20:46:20 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-31 20:46:20 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-31 20:46:23 INFO - users were display - library.operation.UserOperation - showUserWithBooksBorrowed 
+2018-03-31 20:46:29 INFO - users were display - library.operation.UserOperation - showUserWithBooksBorrowed 
+2018-03-31 20:47:36 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-31 20:47:36 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-31 20:47:39 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-31 20:47:41 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-03-31 20:47:46 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-03-31 20:47:46 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-03-31 20:48:51 INFO - read from file User.xml - library.operation.Storage - read 
+2018-03-31 20:48:51 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-03-31 20:48:53 INFO - users were display - library.operation.UserOperation - showUsers 
+2018-03-31 20:48:57 INFO - books were shown for user with id 1 - library.operation.BookOperation - showBooksByUser 
+2018-04-01 09:06:02 INFO - read from file User.xml - library.operation.Storage - read 
+2018-04-01 09:06:02 INFO - read from file Book.xml - library.operation.Storage - read 
+2018-04-01 09:06:05 INFO - users were display - library.operation.UserOperation - getUserWithBooksBorrowed 
+2018-04-01 09:06:07 INFO - users were display - library.operation.UserOperation - getUsers 
+2018-04-01 09:06:12 INFO - books were shown for user with id 1 - library.operation.BookOperation - getBooksByUser 
+2018-04-01 09:06:14 INFO - books were shown for user with id 1 - library.operation.BookOperation - getBooksByUser 
+2018-04-01 09:06:16 INFO - book is return - library.operation.BookOperation - returnBook 
+2018-04-01 09:06:18 INFO - books were display - library.operation.BookOperation - getAvailableBooks 
+2018-04-01 09:06:19 INFO - borrowed a book - library.operation.BookOperation - borrow 
+2018-04-01 09:06:21 INFO - books were shown for user with id 1 - library.operation.BookOperation - getBooksByUser 
+2018-04-01 09:06:24 INFO - saved to file Book.xml - library.operation.Storage - save 
+2018-04-01 09:06:24 INFO - saved to file User.xml - library.operation.Storage - save 
+2018-04-01 09:25:59 INFO - read from file User.xml - operation.Storage - read 
+2018-04-01 09:25:59 INFO - read from file Book.xml - operation.Storage - read 
+2018-04-01 09:26:25 INFO - book added - operation.BookOperation - addBook 
+2018-04-01 09:26:28 INFO - books were display - operation.BookOperation - getBooksAndStatusOfBorrow 
+2018-04-01 09:26:46 INFO - read from file User.xml - operation.Storage - read 
+2018-04-01 09:26:46 INFO - read from file Book.xml - operation.Storage - read 
+2018-04-01 09:26:49 INFO - books were display - operation.BookOperation - getBooksAndStatusOfBorrow 
+2018-04-01 09:26:51 INFO - saved to file Book.xml - operation.Storage - save 
+2018-04-01 09:26:51 INFO - saved to file User.xml - operation.Storage - save 
