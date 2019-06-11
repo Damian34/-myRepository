@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Rest Client</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="jquery-1.12.4.min.js"></script>
+        <script src="funkcje.js"></script>
+        
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            th, td {
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even){background-color: #f2f2f2}
+
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>  
+    </head>
+    <body>
+        <h1>Aplikacja kliencka</h1>
+        <div>tutaj jest strona czytelników</div>
+        <form action="książka.html" method="post">
+            <input type="submit" value="      ksiązki      ">            
+        </form>
+        <form action="wypożyczenie.html" method="post">
+            <input type="submit" value="wypożyczenia">
+        </form>
+        <hr/>
+        
+        <div style="white-space: pre-wrap">szukaj osoby                                   pokaż status,pod nr osoby</div>
+        <div>
+        <input id="ReaderAll" name="ReaderAll" type="text">
+        <input type="submit" value="szukaj" name="button1" onClick="ReaderAll()">
+        
+        <input id="ReaderStatus" name="ReaderStatus" type="text">
+        <input type="submit" value="pokaż" name="button2" onClick="ReaderStatus()">
+        <input type="submit" value="pokaż wypożyczających" name="button3" onClick="ReaderBorrower()">
+        </div>
+                
+        <div style="white-space: pre-wrap">dodaj czytelnika ,podaj imie i nazwisko                                 usuń czytelnika</div>
+        <div>
+        <input id="imie" name="imie" type="text">
+        <input id="nazwisko" name="nazwisko" type="text">
+        <input type="submit" value="dodaj" name="button4" onClick="ReaderAdd()">
+        
+        <input id="RemoveReader" name="RemoveReader" type="text">
+        <input type="submit" value="usuń" name="button5" onClick="RemoveReader()">
+        </div>
+        
+        
+        
+        <script>Text()</script>
+        <div id="tabela"></div>
+        
+    </body>
+</html>

@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Service/">
+
+<xs:element name="AllStatus" type="tns:AllStatus"/>
+
+<xs:element name="AllStatusResponse" type="tns:AllStatusResponse"/>
+
+<xs:element name="BookAdd" type="tns:BookAdd"/>
+
+<xs:element name="BookAddResponse" type="tns:BookAddResponse"/>
+
+<xs:element name="BookGive" type="tns:BookGive"/>
+
+<xs:element name="BookGiveResponse" type="tns:BookGiveResponse"/>
+
+<xs:element name="BookReturn" type="tns:BookReturn"/>
+
+<xs:element name="BookReturnResponse" type="tns:BookReturnResponse"/>
+
+<xs:element name="BooksAll" type="tns:BooksAll"/>
+
+<xs:element name="BooksAllResponse" type="tns:BooksAllResponse"/>
+
+<xs:element name="BooksAvailable" type="tns:BooksAvailable"/>
+
+<xs:element name="BooksAvailableResponse" type="tns:BooksAvailableResponse"/>
+
+<xs:element name="BooksBorrowed" type="tns:BooksBorrowed"/>
+
+<xs:element name="BooksBorrowedResponse" type="tns:BooksBorrowedResponse"/>
+
+<xs:element name="BooksHeld" type="tns:BooksHeld"/>
+
+<xs:element name="BooksHeldResponse" type="tns:BooksHeldResponse"/>
+
+<xs:element name="BorrowedStatus" type="tns:BorrowedStatus"/>
+
+<xs:element name="BorrowedStatusResponse" type="tns:BorrowedStatusResponse"/>
+
+<xs:element name="ReaderAdd" type="tns:ReaderAdd"/>
+
+<xs:element name="ReaderAddResponse" type="tns:ReaderAddResponse"/>
+
+<xs:element name="ReaderAll" type="tns:ReaderAll"/>
+
+<xs:element name="ReaderAllResponse" type="tns:ReaderAllResponse"/>
+
+<xs:element name="ReaderBorrower" type="tns:ReaderBorrower"/>
+
+<xs:element name="ReaderBorrowerResponse" type="tns:ReaderBorrowerResponse"/>
+
+<xs:element name="ReaderStatus" type="tns:ReaderStatus"/>
+
+<xs:element name="ReaderStatusResponse" type="tns:ReaderStatusResponse"/>
+
+<xs:element name="RemoveBook" type="tns:RemoveBook"/>
+
+<xs:element name="RemoveBookResponse" type="tns:RemoveBookResponse"/>
+
+<xs:element name="RemoveReader" type="tns:RemoveReader"/>
+
+<xs:element name="RemoveReaderResponse" type="tns:RemoveReaderResponse"/>
+
+<xs:element name="UpdateAll" type="tns:UpdateAll"/>
+
+<xs:element name="UpdateAllResponse" type="tns:UpdateAllResponse"/>
+
+<xs:element name="czytelnik" type="tns:czytelnik"/>
+
+<xs:element name="książka" type="tns:książka"/>
+
+<xs:element name="wypożyczenie" type="tns:wypożyczenie"/>
+
+<xs:complexType name="AllStatus">
+<xs:sequence>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="książka">
+<xs:sequence>
+<xs:element name="autor" type="xs:string" minOccurs="0"/>
+<xs:element name="idKsiążka" type="xs:int" minOccurs="0"/>
+<xs:element name="tytuł" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="czytelnik">
+<xs:sequence>
+<xs:element name="idCzytelnik" type="xs:int" minOccurs="0"/>
+<xs:element name="imie" type="xs:string" minOccurs="0"/>
+<xs:element name="nazwisko" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="wypożyczenie">
+<xs:sequence>
+<xs:element name="dataWypożyczenia" type="xs:string" minOccurs="0"/>
+<xs:element name="idCzytelnika" type="xs:int" minOccurs="0"/>
+<xs:element name="idKsiążka" type="xs:int" minOccurs="0"/>
+<xs:element name="idWypożyczenie" type="xs:int" minOccurs="0"/>
+<xs:element name="status" type="xs:string" minOccurs="0"/>
+<xs:element name="terminZwrotu" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AllStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:punkt2" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="punkt2">
+<xs:sequence>
+<xs:element name="czytelnik" type="tns:czytelnik" minOccurs="0"/>
+<xs:element name="książka" type="tns:książka" minOccurs="0"/>
+<xs:element name="wyp" type="tns:wypożyczenie" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RemoveBook">
+<xs:sequence>
+<xs:element name="numer" type="xs:int"/>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RemoveBookResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:punkt4" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="punkt4">
+<xs:sequence>
+<xs:element name="text" type="xs:string" minOccurs="0"/>
+<xs:element name="lk" type="tns:książka" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BookGive">
+<xs:sequence>
+<xs:element name="idk" type="xs:int"/>
+<xs:element name="idc" type="xs:int"/>
+<xs:element name="czas" type="xs:int"/>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BookGiveResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:punkt4" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BookAdd">
+<xs:sequence>
+<xs:element name="tytul" type="xs:string" minOccurs="0"/>
+<xs:element name="autor" type="xs:string" minOccurs="0"/>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BookAddResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:punkt4" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ReaderStatus">
+<xs:sequence>
+<xs:element name="numer" type="xs:int"/>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ReaderStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:punkt3" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="punkt3">
+<xs:sequence>
+<xs:element name="książka" type="tns:książka" minOccurs="0"/>
+<xs:element name="wypożyczenie" type="tns:wypożyczenie" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BooksHeld">
+<xs:sequence>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BooksHeldResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BorrowedStatus">
+<xs:sequence>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BorrowedStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:punkt2" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BooksBorrowed">
+<xs:sequence>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BooksBorrowedResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BookReturn">
+<xs:sequence>
+<xs:element name="numer" type="xs:int"/>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BookReturnResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:punkt4" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BooksAvailable">
+<xs:sequence>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BooksAvailableResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BooksAll">
+<xs:sequence>
+<xs:element name="text" type="xs:string" minOccurs="0"/>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BooksAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ReaderBorrower">
+<xs:sequence>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ReaderBorrowerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:punkt1" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="punkt1">
+<xs:sequence>
+<xs:element name="czytelnik" type="tns:czytelnik" minOccurs="0"/>
+<xs:element name="ilość" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ReaderAll">
+<xs:sequence>
+<xs:element name="text" type="xs:string" minOccurs="0"/>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ReaderAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ReaderAdd">
+<xs:sequence>
+<xs:element name="imie" type="xs:string" minOccurs="0"/>
+<xs:element name="nazwisko" type="xs:string" minOccurs="0"/>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ReaderAddResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:punkt4" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RemoveReader">
+<xs:sequence>
+<xs:element name="numer" type="xs:int"/>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RemoveReaderResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:punkt4" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UpdateAll">
+<xs:sequence>
+<xs:element name="lk" type="tns:książka" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lc" type="tns:czytelnik" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="lw" type="tns:wypożyczenie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UpdateAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:punkt4" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
