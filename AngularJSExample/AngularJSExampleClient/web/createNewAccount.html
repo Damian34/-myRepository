@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>Create New Account</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>       
+        <script src="js/jquery-1.12.4.min.js"></script> 
+        <script src="js/controllersAngular.js"></script>
+        <script src="js/functions.js"></script>
+    </head>
+    <body ng-controller="myController">
+        <h2>Create New Account</h2>
+        <p>Login : <input type="text" ng-model="newLogin"></p>
+        <p>Password : <input type="text" ng-model="newPassword"></p>
+        <p><input type="button" value="commit" ng-click="createUser()"></p>
+        <p>{{createUserResponse}}</p>
+        <a href='index.html'>Go to Main page</a>
+    </body>
+</html>
