@@ -1,0 +1,122 @@
+
+body{
+    background-color: azure;
+    box-sizing: border-box;
+}
+
+.backFirst {
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px; 
+    width: 15%;
+}
+
+.backSecond {
+    float: left;
+    padding-left: 20px;
+    width: 70%;
+}
+
+.button1{
+    margin-top: 6px;
+    width: 220px;
+    width: 100%;
+    height: 32px;   
+    background-color: #4CAF50; /* Green */
+    border: 1px solid green;
+    color: white;   
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    clear: both;
+    
+}
+.button1:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+.button1:hover {
+    background-color: #3e8e41;
+}
+/* ////////////////////////////////////////////////////////////*/
+
+
+.cellButton{
+    width: 100%;
+    height: 100%;   
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    display: table-cell;
+    font-size: 16px;
+    background:none!important;
+    color:inherit;
+    border:none; 
+    padding:0!important;
+    font: inherit;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#tables tr:nth-child(even){background-color: #f2f2f2;}
+
+.col1 {
+    float: left;
+    width: 80px;
+    margin-top: 6px;
+}
+
+.col2 {
+    float: left;
+    width: 80px;
+    margin-top: 6px;
+}
+
+/* table */
+#tables {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    clear: both;
+}
+
+#tables th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#tables td{
+    border: 1px solid #ddd;
+    padding: 0;
+}
+
+#tables tr:nth-child(even){background-color: #f2f2f2;}
+
+#tables tr:hover {background-color: #ddd;}
+
+#tables th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cls{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    clear: both;
+}
+
+#panel {
+    display: none;
+}
