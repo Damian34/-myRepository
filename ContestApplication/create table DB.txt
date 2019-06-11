@@ -1,0 +1,28 @@
+﻿#CREATE SCHEMA `mysql_users` ;
+
+CREATE TABLE User (
+    ID int NOT NULL PRIMARY KEY,
+    Login varchar(255),
+    Password varchar(255),
+    Role varchar(255) DEFAULT "USER"
+);
+
+CREATE TABLE Competition (
+    ID int NOT NULL PRIMARY KEY,
+    DateOfCompetitionBegin varchar(255),
+	Title varchar(255),
+	Description varchar(2500)
+);
+
+CREATE TABLE Participation (
+    ID int NOT NULL PRIMARY KEY,
+    User_Id int ,
+	Competition_Id int,
+	Position int DEFAULT 0,
+    FOREIGN KEY (User_Id) REFERENCES User(ID),
+    FOREIGN KEY (Competition_Id) REFERENCES Competition(ID)
+);
+
+
+
+

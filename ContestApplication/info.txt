@@ -1,0 +1,3 @@
+ContestApplicationServer with Procfile can be push on Heroku
+,then application and rest methods are working by browser 
+,but I can't call them by javascript even these whitch doesn't use database.

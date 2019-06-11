@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-09-13 08:56:31 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="tables.User" table="user" catalog="mysql_users" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="login" type="string">
+            <column name="Login" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" />
+        </property>
+        <property name="role" type="string">
+            <column name="Role" />
+        </property>
+        <set name="participations" table="participation" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="User_Id" />
+            </key>
+            <one-to-many class="tables.Participation" />
+        </set>
+    </class>
+</hibernate-mapping>

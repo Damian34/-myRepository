@@ -1,0 +1,23 @@
+.btn-xl {
+    padding: 20px 30px;
+    font-size: 30px;
+    border-radius: 10px;
+    width:60%;
+}
+
+.fn1{
+    font-size:50px;
+}
+
+.fn2{
+    font-size:40px;
+}
+
+.fn3{
+    font-size:25px;
+}
+
+.alg1{
+    float: right;
+    /*margin-bottom: 50px;*/
+}

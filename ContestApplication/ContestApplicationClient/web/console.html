@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>Konsola</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://cdn.bootcss.com/angular-datatables/0.6.2/angular-datatables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script><!---->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+        <script src="js/sha3.js"></script>
+        <script src="js/controllersAngular.js"></script>   
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse" ng-controller="menuCtr">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>         
+                    </button>
+                    <a class="navbar-brand" href="index.html">WebSiteName</a>
+                    <a id="logedUserName" class="navbar-brand">{{usedLogin}}</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a id="console" style="display: none" ng-click="console()"><span class="glyphicon glyphicon-cog"></span> Konsola</a></li>
+                        <li><a id="SignUp" href="registration.html"><span class="glyphicon glyphicon-user"></span> Rejestracja</a></li>
+                        <li><a id="logIn" href="login.html"><span class="glyphicon glyphicon-log-in"></span> Logowanie</a></li>
+                        <li><a id="logOut" style="display: none" ng-click="logOut()"><span class="glyphicon glyphicon-log-out"></span> Wyloguj</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div ng-controller="consoleCtr">
+                <button class="btn btn-lg btn-primary" type="submit" ng-click="verifyRole()">Dodaj nowy konkurs</button>
+                </br></br>
+            </div>
+            <div ng-controller="consoleCompetitionsCtr" data-ng-init="allCompetitions()">
+                <table class="table table-hover" datatable="ng" dt-options="vm.dtOptions">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Tytuł</th>
+                            <th>Opis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="com in comList" ng-click="selectCompetition(com.id)">
+                            <td>
+                                {{com.dateOfCompetitionBegin}}
+                            </td>
+                            <td>
+                                {{com.title}}
+                            </td>
+                            <td>
+                                {{com.description}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
