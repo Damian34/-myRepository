@@ -1,5 +1,0 @@
-lp;wzrost;wiek;kolor;napis
-1;152;30;bialy;abc
-2;165;42;czarny;cba
-3;178;18;zielony;bba
-3;177;18;zielony;bba
