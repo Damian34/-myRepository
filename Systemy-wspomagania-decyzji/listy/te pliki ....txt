@@ -1,0 +1,1 @@
+te pliki niekiedy zaczynaj¹ sie na eof() ,tzn od koñca pliku
