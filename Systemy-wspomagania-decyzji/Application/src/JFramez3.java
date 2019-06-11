@@ -1,0 +1,459 @@
+
+import java.awt.Component;
+import java.awt.MenuBar;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Vector;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellEditor;
+import javax.swing.table.TableModel;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author dami
+ */
+public class JFramez3 extends javax.swing.JFrame {
+
+    List<String> lista = new ArrayList<>();
+    List<String> lista2 = new ArrayList<>();//lista pomocnicza do przechowywania danych ,w razie nieprawidłowego wyjścia
+    DefaultTableModel model = new DefaultTableModel();
+    
+    JFrameAplication frame;
+    
+    
+    /**
+     * Creates new form JFramez9
+     */
+    public JFramez3() {
+        initComponents();
+        this.setTitle("Tabela");
+                
+        try {
+        UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+        SwingUtilities.updateComponentTreeUI(this);
+        this.pack();
+        } 
+        catch (Exception e) {}
+        
+        pisz();
+        /*
+        //new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        jScrollPane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+        jScrollPane1.setWheelScrollingEnabled(true);
+        */
+    }
+    
+    public JFramez3(JFrameAplication frame) {
+        initComponents();
+        this.setTitle("Tabela");
+        
+        try {
+        UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+        SwingUtilities.updateComponentTreeUI(this);
+        this.pack();
+        } 
+        catch (Exception e) {}
+        
+        this.frame=frame;
+        this.lista=frame.kol.getLinie();
+        this.lista2=new ArrayList(frame.kol.getLinie());
+        ///////////////////////////////////////////
+        
+        //pisz();
+        update();
+        
+    }
+    
+    public void pisz()
+    {
+    //DefaultTableModel model = new DefaultTableModel();
+    //JTable table = new JTable(model);
+
+    model.addColumn("Col1");
+    model.addColumn("Col2");
+    model.addColumn("Col3");
+    
+    //Vector v = new Vector();
+           
+    Object[] a ={"a","b","c"};
+    
+    model.addRow(a);
+    
+    
+    jTable1.setModel(model);
+    jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+    }
+    
+    public void update()//bierze dane z klasy kolumny i dodaje do tabeli
+    {
+    //JTable table = new JTable(model);
+    model = new DefaultTableModel();
+        
+    //dodaje kolumny
+    for(int i=0;i<frame.kol.Naglow().size();i++)
+    {
+        model.addColumn(frame.kol.Naglow().get(i));
+    }
+    
+    //List<List<String>> lis = frame.kol.getLinie(0);
+    
+    /////////////////////////
+    //System.out.println(frame.kol.wiersz(frame.kol.ileWierszy()-1).get(0)+" | "+frame.kol.wiersz(frame.kol.ileWierszy()-1).get(1)+" | "+frame.kol.wiersz(frame.kol.ileWierszy()-1).get(2));
+    
+    //dodaje wiersze
+    for(int i=0;i<frame.kol.ileWierszy();i++)
+    {
+        int n=frame.kol.ileKolumn();
+        
+        Object[] ob =new String[n];
+        for(int j=0;j<n;j++)
+        {
+            ob[j]=frame.kol.wiersz(i).get(j);
+        }
+        model.addRow(ob);
+    }  
+        
+    jTable1.setModel(model);
+    jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+    
+    
+    }
+    
+    public void pisz3()//zapisje liste z klasy Kolumny tutaj
+    {
+    lista=frame.kol.getLinie();
+        
+    List<String> list= new ArrayList<>();
+        
+    int n=lista.get(0).split(frame.kol.znak).length;//liczba kolumn
+    int m=lista.size();//liczba wierszy
+    //int m=lista.size();
+    ////dodaje kolumny do listy jeśli były tam kolumny
+    if(frame.kol.naglowki)
+    {
+        //System.out.println(frame.kol.getLinie().size());
+        list.add(lista.get(0));
+        m=m-1;
+    }
+    
+    for(int i=0;i<m;i++)
+    {
+        list.add(zmienn(i));
+    }
+    
+        
+    lista=list;
+            
+    
+    }
+    
+    
+    
+    public String zmienn(int k)//pobieram k'ty wiersz
+    {        
+        Vector data = model.getDataVector();
+        String s = data.get(k).toString().replace(" ","").replace("[","").replace("]","");
+        
+        s = s.replace(",",";");
+        
+        return s;
+    }
+    
+    
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null},
+                {null},
+                {null},
+                {null}
+            },
+            new String [] {
+                "Title 1"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jMenu1.setText("Edytuj");
+
+        jMenuItem1.setText("Wczytaj z pliku");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("Zapisz do pliku");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuItem3.setText("Zapisz zmiany");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Metoda K-nn");
+
+        jMenuItem4.setText("Klasyfikacji ");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem4);
+
+        jMenuItem5.setText("Oceny");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem5);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Grupy");
+
+        jMenuItem6.setText("Metoda k-średnich");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem6);
+
+        jMenuItem7.setText("Porównaj kolumny");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem7);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu4.setText("Drzewo");
+
+        jMenuItem8.setText("Klasyfikacji ");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem8);
+
+        jMenuItem9.setText("Oceny");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem9);
+
+        jMenuBar1.add(jMenu4);
+
+        setJMenuBar(jMenuBar1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    
+    
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // wczytywanie danych
+
+        JFramez4 ap = new JFramez4(this);
+        update();
+
+        ap.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    public boolean potwierdzenie=false;
+    
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // zapisywanie danych
+        pisz3();
+        frame.listx=lista;
+        frame.postData();
+        JFramez6 fr = new JFramez6(lista,this);
+
+        if(potwierdzenie)
+        fr.setVisible(false);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // zapisz zmiany i wyślij do JFrameApliction
+        pisz3();
+        frame.listx=lista;
+        frame.postData();
+        frame.kol.Aktualizacja();
+
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // tryb klasyfikacji
+        
+        JFramez8 fr8 = new JFramez8(this);
+        
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // tryb oceny
+        
+        JFramez7 fr7 = new JFramez7(this);
+          
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        // TODO add your handling code here:
+        frame.kol.setLinie(lista2);
+    }//GEN-LAST:event_formWindowClosed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        JFramezz10z fr10 =new JFramezz10z(this);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+        JFramezz11z fr11 =new JFramezz11z(this);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // tryb klasyfikacji drzewa decyzyjnego
+        JFramezzz13z fr12 =new JFramezzz13z(this,0);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // tryb oceny drzewa decyzyjnego
+        JFramezzz13z fr12 =new JFramezzz13z(this,1);        
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(JFramez3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(JFramez3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(JFramez3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(JFramez3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new JFramez3().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    // End of variables declaration//GEN-END:variables
+
+}

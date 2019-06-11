@@ -1,0 +1,6 @@
+aplikacja pozwala analizowaæ ró¿ne zbiory danych aplikacja 
+pozwala analizowaæ ró¿ne zbiory danych .
+
+dodatkowe biblioteki:
+JMathPlot-1.0.jar
+colt-1.1.jar
