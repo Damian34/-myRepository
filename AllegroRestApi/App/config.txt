@@ -1,0 +1,3 @@
+clientId: xxx
+clientSecret: xxx
+redirect_uri: https://allegro.pl
