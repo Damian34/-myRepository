@@ -1,0 +1,5 @@
+host: xxx
+port: 3306
+datebase: xxx
+username: xxx
+pass: xxx
