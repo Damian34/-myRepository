@@ -1,0 +1,14 @@
+
+
+
+.transparentButton {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: grey;
+  margin: 14px;
+}
+.transparentButton:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+}
