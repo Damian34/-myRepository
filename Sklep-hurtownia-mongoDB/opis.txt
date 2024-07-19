@@ -1,5 +1,0 @@
-Aplikacja z wykorzystaniem bazy dokumentowej mongoDB 
-pokazuj¹ca iloœæ twarów w sklepie lub hurtowni ,z mo¿liwoœci¹ ich modyfikacji .
-
-dodatkowe biblioteki:
-mongo-java-driver-2.9.3.jar

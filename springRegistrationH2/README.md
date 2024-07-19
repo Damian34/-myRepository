@@ -1,6 +1,7 @@
 Spring Registration
 ====================
-App is an example of registration in Spring Boot.
+
+App is an example of registration in Spring Boot.\
 Application allows you to log in, register the user and store notes with spring protection 
 
 dependencies included:
@@ -10,7 +11,7 @@ dependencies included:
 - Thymeleaf
 - H2 Database
 
- H2 is in-memory database and volatile, then data will be lost when we restart the application. 
+ H2 is in-memory database and volatile, then data will be lost when we restart the application.\
  but also there is no need for installing any SQL DB in order to run the application
  
  contains also:

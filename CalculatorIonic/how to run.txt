@@ -1,9 +1,0 @@
-how to run app by console in browser:
-
-ionic start Calculator blank --v4
-
-in the installation process ,installing android platform is not necessary
-
-after creating project replace src folder then go inside project then type:
-
-ionic serve

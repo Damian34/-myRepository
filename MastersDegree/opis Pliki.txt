@@ -1,5 +1,0 @@
-
-w tym katalogu znajudj¹ sie pliki do Matlaba ,
-s³u¿y³y mi one do pracy magisterskiej .
-Pozwalaj¹ one na zastosowanie metody DCT ,która ukrywa cyfrowy znak wodny w obrazie
-i na jej testowanie .

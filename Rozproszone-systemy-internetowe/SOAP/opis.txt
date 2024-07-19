@@ -1,20 +1,20 @@
 aplikacja wykorzystuje architektre SOA ,
-sama aplikacja imituje zasade dzia³ania biblioteki 
-,tzn ró¿ni czytelnicy mog¹ wypo¿yczaæ ksi¹¿ki
+sama aplikacja imituje zasade dziaï¿½ania biblioteki 
+,tzn rÃ³Å¼ni czytelnicy mogÄ… wypoÅ¼yczaÄ‡ ksiÄ…Å¼ki
 
-serwis korzysta z nastepój¹cych tabel z bazy danych JDBC:
+serwis korzysta z nastepÃ³jÄ…cych tabel z bazy danych JDBC:
 czytelnicy
 id_czytelnik   (number)
 imie           (string)
 nazwisko       (string)
 
-ksi¹¿ki
-id_ksi¹¿ka     (number)
-tytu³          (string)
+ksiï¿½ï¿½ki
+id_ksiï¿½ï¿½ka     (number)
+tytuï¿½          (string)
 autor          (string)
 
-wypo¿yczone
-id_wypo¿yczone (number)
+wypoï¿½yczone
+id_wypoï¿½yczone (number)
 id_czytelnika  (number)
-_id_ksi¹¿ka    (number)
+_id_ksiï¿½ï¿½ka    (number)
 status         (string)

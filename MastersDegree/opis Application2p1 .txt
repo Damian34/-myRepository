@@ -1,5 +1,0 @@
-
-aplikacja Application2p1 wykorzystuje algorytm LSB
-do ukrywania informacji w postaci tesktu lub obrazu 
-,i pozwala na jego wydobycie z obrazu 
-(algorytm dzia³a dobrze jeœli ukrywany obraz nie jest zbyd du¿y np ma rozmiar 16x16)
